@@ -1,5 +1,8 @@
+import java.util.Random;
+
 public class Human {
 
+    public Random rand = new Random();
     private String paleColor;
     private float height;
     private float weight;
@@ -8,6 +11,30 @@ public class Human {
 
     public void speak(){
 
+        int x = rand.nextInt(5);
+
+        switch (x) {
+
+            case 0:
+            System.out.println("I'm a human");
+                break;
+
+            case 1:
+            System.out.println("Hello There!");
+                break;
+
+            case 2:
+            System.out.println("I'm only human, after all");
+                break;
+
+            case 3:
+            System.out.println("Hello, my name is");
+                break;
+
+            case 4:
+            System.out.println("Hey! Are you human too?");
+                break;
+        }
     }
 
     public void walk(){
