@@ -8,7 +8,11 @@ public class Human {
     private float weight;
     private boolean rightHanded;
     private int age;
+    private boolean isWalking;
+    private boolean isRunning;
 
+    //Human methods
+    
     public void speak(){
 
         int x = rand.nextInt(5);
@@ -38,7 +42,8 @@ public class Human {
     }
 
     public void walk(){
-
+        System.out.println("Walking");
+        this.setIsWalking(true);
     }
 
     public void run(){
@@ -53,74 +58,71 @@ public class Human {
 
     }
 
+    public void showAttributes(){
+        System.out.println("==== Human attributes ====");
+        System.out.println("Height: "+this.getHeight());
+        System.out.println("Weight: "+this.getWeight());
+        System.out.println("Is right handed? "+this.isRightHanded());
+        System.out.println("Age: "+this.getAge());
+        System.out.println("Is walking? "+this.isWalking());
+        System.out.println("Is running? "+this.isRunning());
+    }
+
     //Getters and Setters
-    /**
-     * @return String return the paleColor
-     */
+
     public String getPaleColor() {
         return paleColor;
     }
 
-    /**
-     * @param paleColor the paleColor to set
-     */
     public void setPaleColor(String paleColor) {
         this.paleColor = paleColor;
     }
 
-    /**
-     * @return float return the height
-     */
     public float getHeight() {
         return height;
     }
 
-    /**
-     * @param height the height to set
-     */
     public void setHeight(float height) {
         this.height = height;
     }
 
-    /**
-     * @return float return the weight
-     */
     public float getWeight() {
         return weight;
     }
 
-    /**
-     * @param weight the weight to set
-     */
     public void setWeight(float weight) {
         this.weight = weight;
     }
 
-    /**
-     * @return boolean return the rightHanded
-     */
     public boolean isRightHanded() {
         return rightHanded;
     }
 
-    /**
-     * @param rightHanded the rightHanded to set
-     */
     public void setRightHanded(boolean rightHanded) {
         this.rightHanded = rightHanded;
     }
 
-    /**
-     * @return int return the age
-     */
     public int getAge() {
         return age;
     }
 
-    /**
-     * @param age the age to set
-     */
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public boolean isWalking(){
+        return isWalking;
+    }
+
+    public void setIsWalking(boolean isWalking){
+        this.isWalking = isWalking;
+    }
+
+    public boolean isRunning() {
+        return isRunning;
+    }
+
+    public void setIsRunning(boolean isRunning) {
+        this.isRunning = isRunning;
     }
 }
